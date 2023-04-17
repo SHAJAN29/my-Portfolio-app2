@@ -1,0 +1,19 @@
+
+
+
+.Hompage{
+
+z-index: 1;
+
+}
+
+.sectionFirst{
+
+    min-height: fit-content;
+    -moz-fit:fit-content;
+    }
+.sectionSec{
+
+height: 100vh;
+
+}

@@ -1,0 +1,26 @@
+.CardSvg svg{
+
+width: 20px;
+position: absolute;
+top:15px;
+left: 15px;
+
+
+}
+
+
+@media screen  and (max-width:700px){
+    
+    .profilePicture img{
+
+        width: 400px;
+    }  
+}
+
+@media screen  and (max-width:900px){
+    
+    .profilePicture img{
+
+        width: 500px;
+    }  
+}

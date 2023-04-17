@@ -1,0 +1,27 @@
+*{
+
+margin: 0;
+padding: 0%;
+box-sizing: border-box;
+
+
+
+}
+
+::-webkit-scrollbar{
+
+    width: 12px;
+  
+
+}
+::-webkit-scrollbar-track{
+    width: 12px;
+    background:#252b45;
+}
+::-webkit-scrollbar-thumb{
+  
+    
+    background: rgb(255, 255, 255);
+
+
+}
