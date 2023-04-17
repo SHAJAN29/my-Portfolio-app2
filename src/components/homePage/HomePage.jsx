@@ -36,7 +36,7 @@ const HomePage = ({ theme }) => {
   return (
     <div className="Hompage">
       <Stack spacing={{ xs: 30, lg: 20, md: 20 }} className="sectionFirst">
-        <Box sx={{ translate: "0 -4em" }}>
+        <Box>
           <FirstSection theme={theme} />
         </Box>
         <Box>

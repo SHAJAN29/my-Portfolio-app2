@@ -271,9 +271,9 @@ export function FirstSection({ theme }) {
               color: theme.palette.mode === "light" ? "#94a3b8" : "#fff",
               fontSize: { md: "6em", lg: "8em" },
               position: "absolute",
-              top: "69%",
+              top: { md: "70%", lg: "76%", xl: "75%" },
               fontWeight: "bold",
-              left: { md: "46%", lg: "52%", xl: "60%" },
+              left: { md: "46%", lg: "52%", xl: "56%" },
               letterSpacing: "10px",
             }}
             variant="h1"
@@ -285,9 +285,9 @@ export function FirstSection({ theme }) {
             sx={{
               fontSize: { lg: "5em", md: "3.5em" },
               position: "absolute",
-              top: { lg: "72%", md: "71.7%" },
+              top: { lg: "79%", md: "72.5%", xl: "78%" },
               fontWeight: "bold",
-              left: { lg: "77%", md: "69%", xl: "85%" },
+              left: { lg: "71%", md: "65.5%", xl: "71%" },
               letterSpacing: "10px",
             }}
           >
