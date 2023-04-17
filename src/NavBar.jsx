@@ -112,6 +112,7 @@ export function NavBar({ theme }) {
         top: "0",
         left: "0",
         padding: {
+          xs: "10px 20px",
           sm: "10px 1.8rem",
           md: "10px 1.7rem",
           lg: "10px 5rem",
@@ -120,7 +121,7 @@ export function NavBar({ theme }) {
         alignItems: "center",
       }}
       direction={"row"}
-      spacing={{ sm: 24, md: 33, lg: 53, xl: 70 }}
+      spacing={{ xs: 1, sm: 24, md: 33, lg: 53, xl: 70 }}
     >
       <Box display={"flex"}>
         {" "}

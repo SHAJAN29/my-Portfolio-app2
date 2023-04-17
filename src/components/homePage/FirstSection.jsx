@@ -44,7 +44,8 @@ export function FirstSection({ theme }) {
             flexDirection: "column",
             padding: "20px",
             translate: {
-              xs: "3em 8em",
+              xs: "5em 8em",
+              sm: "5rem 8rem",
               md: "3em 10em",
               xl: "3em 13em",
               lg: "3em 10em",
@@ -272,7 +273,7 @@ export function FirstSection({ theme }) {
               position: "absolute",
               top: "69%",
               fontWeight: "bold",
-              left: { md: "46%", lg: "60%" },
+              left: { md: "46%", lg: "52%", xl: "60%" },
               letterSpacing: "10px",
             }}
             variant="h1"
@@ -286,7 +287,7 @@ export function FirstSection({ theme }) {
               position: "absolute",
               top: { lg: "72%", md: "71.7%" },
               fontWeight: "bold",
-              left: { lg: "85%", md: "69%" },
+              left: { lg: "77%", md: "69%", xl: "85%" },
               letterSpacing: "10px",
             }}
           >
@@ -296,7 +297,7 @@ export function FirstSection({ theme }) {
       </Grid>
       <Grid
         mt={10}
-        sx={{ display: { xs: "none", md: "flex" } }}
+        sx={{ display: { xs: "none", sm: "none", md: "flex" } }}
         md={9}
         lg={9}
         xl={10}
