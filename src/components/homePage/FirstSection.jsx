@@ -107,7 +107,11 @@ export function FirstSection({ theme }) {
               Get in touch
             </Button>
             <Button
-              onClick={() => <Navigate to="/" replace={true} />}
+              onClick={() =>
+                window.open(
+                  "https://www.figma.com/community/file/1229754618647539681/Resume-(M_SHAJAN)-(Community)"
+                )
+              }
               sx={{
                 marginLeft: "10px",
 
