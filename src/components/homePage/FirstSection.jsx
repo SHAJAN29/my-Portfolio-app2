@@ -3,7 +3,7 @@ import { Article } from "@mui/icons-material";
 import { NavColor, UserContext } from "../../App.jsx";
 import { useContext } from "react";
 import "./FirstSection.css";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function FirstSection({ theme }) {
   const mode = useContext(UserContext);
@@ -37,14 +37,14 @@ export function FirstSection({ theme }) {
 
   return (
     <Grid container sx={{ mt: "1em" }} spacing={8}>
-      <Grid xs={8} md={5} lg={6} xl={7}>
+      <Grid xs={12} md={5} lg={6} xl={7}>
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: { xs: "center" },
             padding: {
-              xs: "5rem 0 0 5rem ",
+              xs: "5rem 0rem 0 4rem ",
               sm: "5rem 0 0rem 5rem",
               md: "5rem 0 2rem 8rem",
               xl: "5rem 0 2rem 8rem",
@@ -72,7 +72,7 @@ export function FirstSection({ theme }) {
               fontSize: {
                 lg: "6em",
                 md: "5em",
-                xs: "4em",
+                xs: "3rem",
                 fontWeight: "500",
               },
             }}
@@ -97,7 +97,7 @@ export function FirstSection({ theme }) {
             <Typography display={"inline-block"} fontWeight={"bold"}>
               front-end developer
             </Typography>{" "}
-            who loves intuitive, clean and <br /> modern UI design.
+            who loves intuitive, clean <br /> and modern UI design.
           </Typography>
           <Box mt={{ md: 1 }}>
             <Button

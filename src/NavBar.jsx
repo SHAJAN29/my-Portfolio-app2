@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  CardMedia,
-  IconButton,
-  Stack,
-  ToggleButton,
-  Typography,
-} from "@mui/material";
+import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
 import { useContext, useEffect, useRef, useState } from "react";
 import { NavColor, UserContext } from "./App";
 import {
@@ -66,16 +58,16 @@ export function NavBar({ theme }) {
   };
 
   useEffect(() => {
+    const closeTheNav = (e) => {
+      if (!refone.current.contains(e.target)) {
+        setShowNav(false);
+      } else {
+        setShowNav(!showNav);
+      }
+    };
+
     document.addEventListener("click", closeTheNav, true);
   }, []);
-
-  const closeTheNav = (e) => {
-    if (!refone.current.contains(e.target)) {
-      setShowNav(false);
-    } else {
-      setShowNav(!showNav);
-    }
-  };
 
   const ToggleFunction = () => {
     return (
@@ -146,11 +138,12 @@ export function NavBar({ theme }) {
                 mode === "light" ? theme.palette.navbarClr : greenClr
               }
               sx={{
+                transition: "0.5s",
                 borderRadius: "20px",
                 padding: "20px",
                 position: "absolute",
-                top: "3.5rem",
-                left: "10.5rem",
+                top: { xs: "3.5rem" },
+                left: { xs: "7.5rem" },
                 flexDirection: "column",
                 gap: "50px",
               }}
@@ -168,7 +161,7 @@ export function NavBar({ theme }) {
                   color={"#fff"}
                   onClick={() => {
                     setVal(ele);
-                    navigate(`${ele}`);
+                    navigate(`/${ele}`);
                     setShowNav(!showNav);
                   }}
                 >
