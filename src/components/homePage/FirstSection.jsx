@@ -42,13 +42,13 @@ export function FirstSection({ theme }) {
           sx={{
             display: "flex",
             flexDirection: "column",
-            padding: "20px",
-            translate: {
-              xs: "5em 8em",
-              sm: "5rem 8rem",
-              md: "3em 10em",
-              xl: "3em 13em",
-              lg: "3em 10em",
+            justifyContent: { xs: "center" },
+            padding: {
+              xs: "5rem 0 0 5rem ",
+              sm: "5rem 0 0rem 5rem",
+              md: "5rem 0 2rem 8rem",
+              xl: "5rem 0 2rem 8rem",
+              lg: "5rem 0 0rem 8rem",
             },
             gap: "1em",
           }}
@@ -102,7 +102,11 @@ export function FirstSection({ theme }) {
           <Box mt={{ md: 1 }}>
             <Button
               onClick={() => navigate("/Contact")}
-              sx={{ color: "#fff" }}
+              sx={{
+                fontWeight: { xs: "bold" },
+                fontSize: { xs: "10px" },
+                color: "#fff",
+              }}
               variant="contained"
             >
               Get in touch
@@ -115,7 +119,8 @@ export function FirstSection({ theme }) {
               }
               sx={{
                 marginLeft: "10px",
-
+                fontSize: { xs: "10px" },
+                fontWeight: { xs: "bold" },
                 ":hover": {
                   backgroundColor: "transparent",
                 },
@@ -271,9 +276,9 @@ export function FirstSection({ theme }) {
               color: theme.palette.mode === "light" ? "#94a3b8" : "#fff",
               fontSize: { md: "6em", lg: "8em" },
               position: "absolute",
-              top: { md: "70%", lg: "76%", xl: "75%" },
+              top: { md: "74%", lg: "63%", xl: "75%" },
               fontWeight: "bold",
-              left: { md: "46%", lg: "52%", xl: "56%" },
+              left: { md: "46%", lg: "50%", xl: "56%" },
               letterSpacing: "10px",
             }}
             variant="h1"
@@ -285,9 +290,9 @@ export function FirstSection({ theme }) {
             sx={{
               fontSize: { lg: "5em", md: "3.5em" },
               position: "absolute",
-              top: { lg: "79%", md: "72.5%", xl: "78%" },
+              top: { lg: "65.5%", md: "77%", xl: "78%" },
               fontWeight: "bold",
-              left: { lg: "71%", md: "65.5%", xl: "71%" },
+              left: { lg: "71%", md: "69.5%", xl: "71%" },
               letterSpacing: "10px",
             }}
           >

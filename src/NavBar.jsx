@@ -111,113 +111,115 @@ export function NavBar({ theme }) {
         position: "sticky",
         top: "0",
         left: "0",
-        padding: {
-          xs: "10px 20px",
-          sm: "10px 1.8rem",
-          md: "10px 1.7rem",
-          lg: "10px 5rem",
-          xl: "10px 12rem",
-        },
-        alignItems: "center",
       }}
-      direction={"row"}
-      spacing={{ xs: 1, sm: 24, md: 33, lg: 53, xl: 70 }}
     >
-      <Box display={"flex"}>
-        {" "}
-        <Typography
-          sx={{ cursor: "pointer" }}
-          onClick={() => navigate("/")}
-          variant="h5"
-        >
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+        }}
+      >
+        <Box display={"flex"}>
           {" "}
           <Typography
-            variant="span"
-            color={scrolled && mode === "dark" ? "#fff" : "primary"}
+            sx={{ cursor: "pointer" }}
+            onClick={() => navigate("/")}
+            variant="h5"
           >
             {" "}
-            Dev.
+            <Typography
+              variant="span"
+              color={scrolled && mode === "dark" ? "#fff" : "primary"}
+            >
+              {" "}
+              Dev.
+            </Typography>
+            Shajan
           </Typography>
-          Shajan
-        </Typography>
-        <ToggleFunction />
-        {showNav ? (
-          <Box
-            ref={refone}
-            className="NavBox"
-            backgroundColor={
-              mode === "light" ? theme.palette.navbarClr : greenClr
-            }
+          <ToggleFunction />
+          {showNav ? (
+            <Box
+              ref={refone}
+              className="NavBox"
+              backgroundColor={
+                mode === "light" ? theme.palette.navbarClr : greenClr
+              }
+              sx={{
+                borderRadius: "20px",
+                padding: "20px",
+                position: "absolute",
+                top: "3.5rem",
+                left: "10.5rem",
+                flexDirection: "column",
+                gap: "50px",
+              }}
+            >
+              {pages.map((ele, index) => (
+                <Typography
+                  sx={{
+                    padding: "5px 20px",
+                    borderRadius: "20px",
+                    ":hover": { backgroundColor: greenClr },
+                    cursor: "pointer",
+                    marginBottom: "20px",
+                  }}
+                  key={index}
+                  color={"#fff"}
+                  onClick={() => {
+                    setVal(ele);
+                    navigate(`${ele}`);
+                    setShowNav(!showNav);
+                  }}
+                >
+                  {ele}
+                </Typography>
+              ))}
+            </Box>
+          ) : null}
+        </Box>
+        <Box>
+          <NavbarItem />
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <IconButton
             sx={{
-              borderRadius: "20px",
-              padding: "20px",
-              position: "absolute",
-              top: "3.5rem",
-              left: "10.5rem",
-              flexDirection: "column",
-              gap: "50px",
+              color: scrolled && mode === "light" ? "#fff" : "primary",
+              paddingX: "10px",
+
+              ":hover": {
+                backgroundColor: "transparent",
+              },
             }}
+            size="large"
+            onClick={() => window.open("https://github.com/SHAJAN29")}
+            variant="text"
           >
-            {pages.map((ele, index) => (
-              <Typography
-                sx={{
-                  padding: "5px 20px",
-                  borderRadius: "20px",
-                  ":hover": { backgroundColor: greenClr },
-                  cursor: "pointer",
-                  marginBottom: "20px",
-                }}
-                key={index}
-                color={"#fff"}
-                onClick={() => {
-                  setVal(ele);
-                  navigate(`${ele}`);
-                  setShowNav(!showNav);
-                }}
-              >
-                {ele}
-              </Typography>
-            ))}
-          </Box>
-        ) : null}
-      </Box>
-      <Box>
-        <NavbarItem />
-      </Box>
-      <Box
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-      >
-        <IconButton
-          sx={{
-            color: scrolled && mode === "light" ? "#fff" : "primary",
-            paddingX: "10px",
+            <GitHub />
+          </IconButton>
 
-            ":hover": {
-              backgroundColor: "transparent",
-            },
-          }}
-          size="large"
-          onClick={() => window.open("https://github.com/SHAJAN29")}
-          variant="text"
-        >
-          <GitHub />
-        </IconButton>
+          <IconButton
+            sx={{
+              color: scrolled && mode === "light" ? "#fff" : "primary",
+              paddingX: "10px",
 
-        <IconButton
-          sx={{
-            color: scrolled && mode === "light" ? "#fff" : "primary",
-            paddingX: "10px",
-
-            ":hover": {
-              backgroundColor: "transparent",
-            },
-          }}
-          size="large"
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          variant="text"
-        >
-          {mode === "light" ? <ModeNight /> : <LightMode />}
-        </IconButton>
+              ":hover": {
+                backgroundColor: "transparent",
+              },
+            }}
+            size="large"
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            variant="text"
+          >
+            {mode === "light" ? <ModeNight /> : <LightMode />}
+          </IconButton>
+        </Box>
       </Box>
     </Stack>
   );
