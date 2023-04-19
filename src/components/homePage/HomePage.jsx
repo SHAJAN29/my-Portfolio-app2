@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, createTheme } from "@mui/material";
+import { Box, Stack, createTheme } from "@mui/material";
 
 import "./HomePage.css";
 import { useContext } from "react";
@@ -6,6 +6,7 @@ import UserContext from "../../App.jsx";
 import { FirstSection } from "./FirstSection";
 import { SecSection } from "./SecSection";
 import { ThirdSection } from "./ThirdSection";
+import { FourthSection } from "./FourthSection";
 
 const HomePage = ({ theme }) => {
   const mode = useContext(UserContext);
@@ -45,8 +46,11 @@ const HomePage = ({ theme }) => {
         <Box>
           <ThirdSection theme={theme} />
         </Box>
+
+        <Box>
+          <FourthSection theme={theme} />
+        </Box>
       </Stack>
-      <section className="sectionSec"></section>
     </div>
   );
 };

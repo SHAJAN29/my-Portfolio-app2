@@ -69,6 +69,16 @@ export function NavBar({ theme }) {
     document.addEventListener("click", closeTheNav, true);
   }, []);
 
+  // const menuBarButton = () => {
+  //   if (scrolled && mode === "light") {
+  //     return "#fff";
+  //   } else if (scrolled && mode === "dark") {
+  //     return "#fff";
+  //   } else {
+  //     return "primary";
+  //   }
+  // };
+
   const ToggleFunction = () => {
     return (
       <Button

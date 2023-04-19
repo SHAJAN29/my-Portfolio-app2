@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+
+/* navBar color  #252b45 */
+/* green color  #70a2ae */
+
+.ContactPage{
+    min-height: 100vh;
+}
+
+.tableBox{
+
+    border-radius: 10px;
+
+ width: 100%;
+ border-collapse:collapse ;
+ font-family: 'Poppins', sans-serif;
+ border-bottom: 1px solid #70a2ae;
+
+}
+.tableBox .thead{
+    text-align: left;
+    padding: 5px;
+    background-color:  #252b45;
+   
+    color: "#fff";
+}
+
+.tableBox .theadDark{
+    text-align: left;
+    padding: 5px;
+    background-color:  #70a2ae;
+   
+    color: "#fff";
+}
+
+.tableBox thead th{
+font-size: 15px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.tableBox tbody td{
+    font-size: 12px;
+
+}
+
+.tableBox thead th,.tableBox tbody td{
+   font-weight: bold;
+
+    padding: 10px;
+  
+} 
+.a{
+    color: #70a2ae;
+    text-decoration: wavy;
+}
+.dark{
+
+    text-decoration: wavy;
+
+color: #fff;
+
+
+}
+
+.dark:hover{
+
+    color: #70a2ae;
+
+
+}
+
+.a:hover{
+    color: #70a2ae;
+    text-decoration: underline;
+}
+
+
+@media screen  and (max-width:600px){
+    
+    .tableBox{
+
+        border-radius: 10px;
+    
+     width: 100%;
+     border-collapse:collapse ;
+     font-family: 'Poppins', sans-serif;
+     border-bottom: 1px solid #70a2ae;
+    
+    }
+
+
+
+
+
+    .tableBox thead th,.tableBox tbody td{
+        font-weight: bold;
+     
+         padding: 5px;
+       
+     } 
+
+     .tableBox thead th{
+        font-size: 12px;
+            color: #fff;
+            font-weight: bolder;
+        }
+        .tableBox tbody td{
+            font-size: 12px;
+        
+        }
+
+}

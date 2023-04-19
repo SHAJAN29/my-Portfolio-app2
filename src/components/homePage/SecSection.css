@@ -1,0 +1,30 @@
+.secSectionBox svg{
+
+width: 100px;
+
+
+}
+
+@media screen and (max-width:600px){
+    
+    .secSectionBox svg{
+
+        width: 70px;
+        
+        
+        }
+
+
+}
+
+@media screen and (max-width:1200px){
+    
+    .secSectionBox svg{
+
+        width: 80px;
+        
+        
+        }
+
+
+}

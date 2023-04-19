@@ -37,7 +37,7 @@ export function FirstSection({ theme }) {
 
   return (
     <Grid container sx={{ mt: "1em" }} spacing={8}>
-      <Grid xs={12} md={5} lg={6} xl={7}>
+      <Grid xs={12} sm={5} md={5} lg={6} xl={7}>
         <Box
           sx={{
             display: "flex",
@@ -46,9 +46,9 @@ export function FirstSection({ theme }) {
             padding: {
               xs: "5rem 0rem 0 4rem ",
               sm: "5rem 0 0rem 5rem",
-              md: "5rem 0 2rem 8rem",
-              xl: "5rem 0 2rem 8rem",
-              lg: "5rem 0 0rem 8rem",
+              md: "5rem 0 2rem 4rem",
+              xl: "5rem 0 2rem 5rem",
+              lg: "5rem 0 0rem 4rem",
             },
             gap: "1em",
           }}
@@ -103,8 +103,8 @@ export function FirstSection({ theme }) {
             <Button
               onClick={() => navigate("/Contact")}
               sx={{
-                fontWeight: { xs: "bold" },
-                fontSize: { xs: "10px" },
+                fontWeight: { xs: "bold", md: "500" },
+                fontSize: { xs: "10px", md: "15px" },
                 color: "#fff",
               }}
               variant="contained"
@@ -119,8 +119,8 @@ export function FirstSection({ theme }) {
               }
               sx={{
                 marginLeft: "10px",
-                fontSize: { xs: "10px" },
-                fontWeight: { xs: "bold" },
+                fontSize: { xs: "10px", md: "15px" },
+                fontWeight: { xs: "bold", md: "500" },
                 ":hover": {
                   backgroundColor: "transparent",
                 },
@@ -262,42 +262,22 @@ export function FirstSection({ theme }) {
           </Box>
         </Box>
       </Grid>
-      <Grid sx={{ display: { xs: "none", md: "flex" } }} md={5} xl={3}>
+      <Grid
+        sx={{ display: { xs: "none", sm: "flex", md: "flex" } }}
+        md={5}
+        sm={5}
+        xl={3}
+      >
         <Box sx={{ left: { md: "50%", xl: "60%" } }} className="profilePicture">
           <CardMedia
             component="img"
             height="100%"
-            sx={{ width: { md: "620px", lg: "700px", xl: "700px" } }}
+            sx={{
+              width: { sm: "300px", md: "620px", lg: "700px", xl: "700px" },
+            }}
             image="https://cdn3d.iconscout.com/3d/premium/thumb/man-6530466-5823045.png"
             alt="profileIMG"
           />
-          <Typography
-            sx={{
-              color: theme.palette.mode === "light" ? "#94a3b8" : "#fff",
-              fontSize: { md: "6em", lg: "8em" },
-              position: "absolute",
-              top: { md: "74%", lg: "63%", xl: "75%" },
-              fontWeight: "bold",
-              left: { md: "46%", lg: "50%", xl: "56%" },
-              letterSpacing: "10px",
-            }}
-            variant="h1"
-          >
-            welcome
-          </Typography>
-          <Typography
-            variant="span"
-            sx={{
-              fontSize: { lg: "5em", md: "3.5em" },
-              position: "absolute",
-              top: { lg: "65.5%", md: "77%", xl: "78%" },
-              fontWeight: "bold",
-              left: { lg: "71%", md: "69.5%", xl: "71%" },
-              letterSpacing: "10px",
-            }}
-          >
-            {" 😊"}
-          </Typography>
         </Box>
       </Grid>
       <Grid

@@ -1,12 +1,13 @@
 import { createContext, useMemo, useState } from "react";
 import "./App.css";
-import { Home, Project } from "./components";
+import { Home } from "./components";
 
 import { Container, Paper, ThemeProvider, createTheme } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import { NavBar } from "./NavBar";
 import ProjectPage from "./components/projectPage/ProjectPage";
 import ContactPage from "./components/Contact page/ContactPage";
+import { FooterApp } from "./FooterApp";
 
 export const UserContext = createContext();
 export const NavColor = createContext();
@@ -109,6 +110,7 @@ function App() {
                   <Route path="/Experience" element={<Home theme={theme} />} />
                 </Routes>
               </Container>
+              <FooterApp theme={theme} greenClr={greenClr} />
             </div>
           </Paper>
         </ThemeProvider>
