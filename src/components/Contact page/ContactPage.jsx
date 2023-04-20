@@ -10,25 +10,32 @@ const ContactPage = () => {
   return (
     <div className="ContactPage">
       <Box sx={{ display: "flex", flexDirection: "column", gap: 10 }}>
-        <Box sx={{ paddingTop: "5rem" }}>
+        <Box sx={{ paddingTop: "5rem", paddingLeft: "1rem" }}>
           <Typography
             sx={{
               color: greenClr,
-              paddingLeft: "10px",
+              paddingLeft: { xs: "0", sm: "10px" },
               fontSize: "30px",
               fontWeight: "bold",
             }}
           >
             Work
           </Typography>
-          <Typography sx={{ fontSize: "5rem", padding: "0" }}>
+          <Typography
+            sx={{ fontSize: { xs: "3rem", sm: "5rem" }, padding: "0" }}
+          >
             Contact
           </Typography>
           <Typography
-            sx={{ paddingLeft: "10px", fontSize: "25px", fontWeight: "300" }}
+            sx={{
+              paddingLeft: { xs: "0", sm: "10px" },
+              fontSize: { sx: "20px", sm: "25px" },
+              fontWeight: "300",
+              width: { xs: "100%", md: "700px" },
+            }}
           >
-            Get in touch with me anytime, through social media, e-mail, <br />{" "}
-            or phone number.
+            Get in touch with me anytime, through social media, e-mail, or phone
+            number.
           </Typography>
         </Box>
 
@@ -51,7 +58,10 @@ const ContactPage = () => {
             }}
           >
             <Typography
-              sx={{ fontSize: "15px", fontWeight: "300" }}
+              sx={{
+                fontSize: "15px",
+                fontWeight: "300",
+              }}
               paddingBottom={6}
             >
               Just a friendly reminder that the information provided here is for
@@ -63,11 +73,7 @@ const ContactPage = () => {
 
           {/*------------------- contact media------------------------ */}
 
-          <Box
-            sx={{
-              borderBottom: `1px solid ${greenClr} `,
-            }}
-          >
+          <Box>
             <Typography color={greenClr} sx={{ fontSize: "3rem" }}>
               Contact
             </Typography>
@@ -112,7 +118,7 @@ const ContactPage = () => {
 
           <Box
             sx={{
-              paddingBottom: "5rem",
+              paddingBottom: "2rem",
             }}
           >
             <Typography color={greenClr} sx={{ fontSize: "3rem" }}>
@@ -139,7 +145,7 @@ const ContactPage = () => {
 
             <Box
               sx={{
-                padding: "1rem 0 1rem 0",
+                padding: "1rem 0 0rem 0",
               }}
             >
               <table className="tableBox">

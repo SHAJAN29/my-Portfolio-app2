@@ -258,6 +258,21 @@ export function FirstSection({ theme }) {
                 image="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vscode_icon_130084.png"
                 alt="vsCode"
               />
+
+              <CardMedia
+                component="img"
+                height="25"
+                sx={{
+                  width: "30px",
+                  objectFit: "contain",
+                  paddingX: "0",
+                  marginX: "0",
+                  ":hover": { filter: "grayscale(0%)" },
+                  filter: "grayscale(100%)",
+                }}
+                image="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png"
+                alt="postMan"
+              />
             </Stack>
           </Box>
         </Box>

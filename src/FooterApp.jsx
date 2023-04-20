@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./FooterApp.css";
 import { useContext } from "react";
 import { UserContext } from "./App";
-import { GitHub } from "@mui/icons-material";
+import { GitHub, OpenInNew } from "@mui/icons-material";
 export function FooterApp({ greenClr, theme }) {
   const footerNavData = ["Projects", "Experience", "Contact"];
 
@@ -59,12 +59,16 @@ export function FooterApp({ greenClr, theme }) {
           <Typography
             onClick={() => navigate(`${ele}`)}
             sx={{
+              display: "flex",
+
+              alignItems: "center",
               fontSize: "15px",
               cursor: "pointer",
               ":hover": { textDecoration: "underline" },
             }}
           >
             {ele}
+            <OpenInNew className="navLinkLogo" fontSize="5px" />
           </Typography>
         ))}
       </Box>
