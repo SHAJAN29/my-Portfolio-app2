@@ -65,7 +65,7 @@ const ContactPage = () => {
               paddingBottom={6}
             >
               Just a friendly reminder that the information provided here is for
-              business purposes only. If you have any questions, feel free to
+              offcial purposes only. If you have any questions, feel free to
               chat with me directly on my social media. I appreciate your
               understanding in using this responsibly.
             </Typography>
@@ -79,7 +79,7 @@ const ContactPage = () => {
             </Typography>
             <Box
               sx={{
-                padding: "1rem 0 1rem 0",
+                padding: "1rem 0 2rem 0",
               }}
             >
               <table className="tableBox">
@@ -96,7 +96,12 @@ const ContactPage = () => {
                     <td>E-mail</td>
                     <td>
                       {" "}
-                      <a className={mode === "light" ? "a" : "dark"} href="">
+                      <a
+                        className={mode === "light" ? "a" : "dark"}
+                        href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWxZQzKFVpMrCfqtLdghCcVgwwMLNZcdhZGRCfGqZMfVXfhgHWxXjMDtTVRjZTQkvMmgV"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         {" "}
                         m.j.sandy2916@gmail.com{" "}
                       </a>
@@ -118,7 +123,7 @@ const ContactPage = () => {
 
           <Box
             sx={{
-              paddingBottom: "2rem",
+              paddingBottom: "1rem",
             }}
           >
             <Typography color={greenClr} sx={{ fontSize: "3rem" }}>
@@ -127,7 +132,7 @@ const ContactPage = () => {
 
             <Typography
               sx={{ fontSize: "15px", fontWeight: "300" }}
-              paddingBottom={5}
+              paddingBottom={2}
               paddingTop={4}
             >
               If you want to find me on social media, just search for @shajan_m.

@@ -5,13 +5,11 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  IconButton,
   Typography,
 } from "@mui/material";
 import React, { useContext } from "react";
 import "./ProjectPage.css";
 import { NavColor, UserContext } from "../../App";
-import { GitHub } from "@mui/icons-material";
 
 const ProjectPage = () => {
   const [mode] = useContext(UserContext);
@@ -30,13 +28,14 @@ const ProjectPage = () => {
 
   const ProjectCard = ({ ele }) => {
     const LocationLink = () => {
-      console.log("Ticket Booking App");
+      window.open("https://www.youtube.com/watch?v=JDuAXWQXwHQ");
     };
 
     const { projectTitle, imageUrl, projectContent, techs } = ele;
     return (
       <Card sx={{ maxWidth: 320, height: 420 }}>
         <CardMedia
+          sx={{ cursor: "pointer" }}
           onClick={LocationLink}
           component="img"
           alt="Ticket Booking App"
@@ -78,14 +77,17 @@ const ProjectPage = () => {
     <div className="ProjectPage">
       <Box>
         <Box sx={{ paddingTop: "7rem" }}>
-          <Typography variant="h1" fontWeight={"bold"}>
+          <Typography
+            sx={{ fontSize: { xs: "3rem", sm: "5rem", md: "6rem" } }}
+            fontWeight={"bold"}
+          >
             Projects
           </Typography>
           <Typography pt={3} variant="h5" fontWeight={300}>
             Showcase of my front-end and full-stack related works.
           </Typography>
         </Box>
-        <Box sx={{ paddingTop: "5rem" }}>
+        <Box sx={{ paddingTop: "5rem", paddingBottom: "5rem" }}>
           {ProjectDetails.map((ele) => (
             <ProjectCard ele={ele} />
           ))}

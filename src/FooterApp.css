@@ -7,16 +7,19 @@
 
     height: 30px;
 
+
 }
 
 .footerIcons .img2 {
 
     height: 40px;
+    cursor: pointer;
 
 }
 
 .footerIcons .img3 {
 
     height: 30px;
+    cursor: pointer;
 
 }

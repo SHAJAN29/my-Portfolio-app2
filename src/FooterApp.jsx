@@ -1,4 +1,4 @@
-import { Box, CardMedia, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "./FooterApp.css";
 import { useContext } from "react";
@@ -15,6 +15,17 @@ export function FooterApp({ greenClr, theme }) {
       top: 0,
       behavior: "smooth",
     });
+  };
+
+  const footerUrlGithub = () => {
+    window.open("https://github.com/SHAJAN29");
+  };
+  const footerUrlTwiter = () => {
+    window.open("https://twitter.com/MShajan141294");
+  };
+
+  const footerUrlLinkdn = () => {
+    window.open("https://www.linkedin.com/in/shajan-m-2705a6162/");
   };
 
   return (
@@ -40,16 +51,23 @@ export function FooterApp({ greenClr, theme }) {
           sx={{ display: "flex", gap: "10px", alignItems: "center" }}
           className="footerIcons"
         >
-          <GitHub fontSize="large" color={mode === "light" ? "#000" : "#fff"} />
-          <img
-            className="img2"
-            src="https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png"
-            alt=""
+          <GitHub
+            onClick={() => footerUrlGithub}
+            cursor="pointer"
+            fontSize="large"
+            color={mode === "light" ? "#000" : "#fff"}
           />
           <img
+            onClick={() => footerUrlLinkdn}
+            className="img2"
+            src="https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png"
+            alt="linkden"
+          />
+          <img
+            onClick={() => footerUrlTwiter}
             className="img3"
             src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"
-            alt=""
+            alt="twiter"
           />
         </Box>
       </Box>

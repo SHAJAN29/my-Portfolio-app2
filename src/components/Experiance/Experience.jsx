@@ -1,4 +1,4 @@
-import { Box, List, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import React, { useContext } from "react";
 import { NavColor } from "../../App";
 import { Lens } from "@mui/icons-material";
