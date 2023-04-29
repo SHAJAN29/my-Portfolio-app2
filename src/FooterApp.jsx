@@ -52,19 +52,19 @@ export function FooterApp({ greenClr, theme }) {
           className="footerIcons"
         >
           <GitHub
-            onClick={() => footerUrlGithub}
+            onClick={footerUrlGithub}
             cursor="pointer"
             fontSize="large"
             color={mode === "light" ? "#000" : "#fff"}
           />
           <img
-            onClick={() => footerUrlLinkdn}
+            onClick={footerUrlLinkdn}
             className="img2"
             src="https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png"
             alt="linkden"
           />
           <img
-            onClick={() => footerUrlTwiter}
+            onClick={footerUrlTwiter}
             className="img3"
             src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"
             alt="twiter"

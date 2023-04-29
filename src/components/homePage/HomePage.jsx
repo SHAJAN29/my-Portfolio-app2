@@ -7,6 +7,7 @@ import { FirstSection } from "./FirstSection";
 import { SecSection } from "./SecSection";
 import { ThirdSection } from "./ThirdSection";
 import { FourthSection } from "./FourthSection";
+import { motion } from "framer-motion";
 
 const HomePage = ({ theme }) => {
   const mode = useContext(UserContext);
@@ -34,6 +35,7 @@ const HomePage = ({ theme }) => {
   // eslint-disable-next-line no-undef
 
   console.log(theme.palette.mode);
+
   return (
     <div className="Hompage">
       <Stack spacing={{ xs: 30, lg: 20, md: 20 }} className="sectionFirst">

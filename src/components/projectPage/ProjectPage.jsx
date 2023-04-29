@@ -10,6 +10,7 @@ import {
 import React, { useContext } from "react";
 import "./ProjectPage.css";
 import { NavColor, UserContext } from "../../App";
+import { useNavigate } from "react-router-dom";
 
 const ProjectPage = () => {
   const [mode] = useContext(UserContext);
@@ -27,8 +28,9 @@ const ProjectPage = () => {
   ];
 
   const ProjectCard = ({ ele }) => {
+    const navigate = useNavigate();
     const LocationLink = () => {
-      window.open("https://www.youtube.com/watch?v=JDuAXWQXwHQ");
+      navigate("/OnProcess");
     };
 
     const { projectTitle, imageUrl, projectContent, techs } = ele;

@@ -9,6 +9,7 @@ import ProjectPage from "./components/projectPage/ProjectPage";
 import ContactPage from "./components/Contact page/ContactPage";
 import { FooterApp } from "./FooterApp";
 import Experience from "./components/Experiance/Experience";
+import { OnProcess } from "./components/projectPage/OnProcess";
 
 export const UserContext = createContext();
 export const NavColor = createContext();
@@ -112,6 +113,8 @@ function App() {
                     path="/Experience"
                     element={<Experience theme={theme} />}
                   />
+
+                  <Route path="/OnProcess" element={<OnProcess />} />
                 </Routes>
               </Container>
               <FooterApp theme={theme} greenClr={greenClr} />
